@@ -2,24 +2,16 @@
 
 ## The task
 
+"Игра в определитель"
+
+На вход программе подаётся квадратная матрица. Необходимо изменить её так, чтобы модуль определителя оказался максимально возможным. 
+Доступное действие только одно: выбрать любую сплошную квадратную подматрицу (то есть квадрат от a[i][j] до a[k][s], где i < k, j < s, k - i == s - j) данной и отразить её относительно любой из диагоналей.
+Необходимо реализовать программу, решающую эту задачу и выводящую итоговый вид матрицы, значение определителя и минимальное количество ходов, требуемых для достижения этого вида.
 
 ## Prerequisites
 
-- Linux distribution 
-  (Tested on Arch Linux 5.10.25-1-lts. Probably, every Linux distro would be good)
-- Xlib
-- OpenGL
-- GLEW
 - C++ compiler (gcc, clang, ...)
 - CMake
-
-```bash
-# On Arch
-sudo pacman -S gcc cmake glew glu libx11
-
-# Ubuntu:
-sudo apt-get install gcc cmake glew glu libx11
-```
 
 ## Building
 
@@ -34,6 +26,8 @@ cmake --build .
 
 ```bash
 cd <repo-root>
-./bin/hello-jetbrains
+./bin/hello-1c <FILE WITH MATRIX>
 ```
+
+## Examples
 

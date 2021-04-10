@@ -1,10 +1,16 @@
-#include <bits/stdint-uintn.h>
+/*============================================================================*/
+
+#include <cstdint>
+#include <tuple>
 #include "matrix.hpp"
 
-
+/*============================================================================*/
 namespace task {
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void LU_decompose(Matrix& matrix, Matrix& lower, Matrix& upper) {
+auto LU_decompose(Matrix& matrix) {
+  Matrix lower(matrix.Size()), upper(matrix.Size());
+
   for (uint64_t i = 0; i < matrix.Size(); ++i) {
     
     for (uint64_t k = i; k < matrix.Size(); ++k) {  
@@ -31,6 +37,9 @@ void LU_decompose(Matrix& matrix, Matrix& lower, Matrix& upper) {
     }
   }
 
+  return std::make_tuple(lower, upper);
 }
 
+/*============================================================================*/
 }
+/*============================================================================*/
