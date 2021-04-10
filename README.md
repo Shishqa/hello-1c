@@ -31,3 +31,31 @@ cd <repo-root>
 
 ## Examples
 
+```bash
+$ ./bin/hello-1c ./examples/MATRIX3
+Got Matrix:
+| 1 0 0 |
+| 0 1 0 |
+| 1 0 0 |
+
+Best Determinant is -1
+
+
+$ ./bin/hello-1c ./examples/MATRIX3
+Got Matrix:
+| 1 2 3 4 |
+| 0 0 0 1 |
+| 1 3 4 0 |
+| 2 2 2 2 |
+
+Best Determinant is 160
+
+
+$ ./bin/hello-1c ./examples/MATRIX3
+Got Matrix:
+| 1 -1 1 |
+| -1 1 -1 |
+| 1 -1 1 |
+
+Best Determinant is 0
+```
